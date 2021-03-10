@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_language_bg"
+    tools:context=".activity.LanguageSelectActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/logo"
+        android:tint="@color/new_yellow" />
+
+
+    <com.foodforme.vendore.customwidget.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/select_lanuage_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/select_language_txt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sdp"
+        app:fontAssetName="@string/font_medium" />
+
+
+    <LinearLayout
+        android:id="@+id/select_lanuage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/englist_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            android:background="@color/color_red"
+            android:gravity="center"
+            android:text="@string/english"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:fontAssetName="@string/font_regular"
+
+            />
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/arabic_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            android:background="@color/greyish"
+            android:gravity="center"
+            android:text="@string/arabic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sdp"
+            app:fontAssetName="@string/font_medium"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/User_profile_relative"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activity.UserProfileActivity"
+android:background="@android:color/darker_gray">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="0.40"
+        android:background="@color/color_red"
+        android:layout_height="90dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.08">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp">
+
+                <com.foodforme.vendore.customwidget.CustomTextView
+                    android:id="@+id/user_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:fontAssetName="@string/font_medium"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+
+
+                    />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/profile_edit_btn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/edit_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/edit"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_update_btn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:visibility="gone">
+                <ImageView
+
+                    android:id="@+id/right_icon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/right_icon"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/back_btn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/left_icon"/>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.38"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_marginTop="15dp">
+
+        <!-- <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="30dp">
+
+             <RelativeLayout
+                 android:id="@+id/Change_img_btn"
+                 android:layout_width="@dimen/_100sdp"
+                 android:layout_height="@dimen/_100sdp"
+                 android:gravity="center"
+                 android:layout_gravity="center">
+
+
+             </RelativeLayout>
+
+             <com.votive.otublivendore.customwidget.CircleImageView
+                 android:id="@+id/user_image"
+                 android:layout_width="100dp"
+                 android:layout_height="100dp"
+                 android:layout_gravity="center"
+                 android:background="@drawable/user_profile" />
+
+             <ImageView
+                 android:id="@+id/camera_btn"
+                 android:layout_width="@dimen/_25sdp"
+                 android:layout_height="@dimen/_25sdp"
+                 android:layout_gravity="center"
+                 android:layout_marginStart="@dimen/_35sdp"
+                 android:layout_marginTop="30dp"
+                 android:src="@drawable/camera_icon"
+                 android:layout_marginLeft="@dimen/_40sdp">
+
+             </ImageView>
+         </FrameLayout>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/rectangle_bg"
+        android:weightSum="8">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_name_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/user"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/First_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_name_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/first_name"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_name_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/First_name_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/First_name_txt"
+                        android:layout_toRightOf="@+id/user_name_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="Nathan"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_name_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/First_name_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_Lname_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/user"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/last_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_Lname_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/last_name"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_Lname_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/last_name_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/last_name_txt"
+                        android:layout_toRightOf="@+id/user_Lname_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="Smith"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_Lname_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/last_name_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/user_mobile_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/smartphone" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_mobile_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/user_mobile_img"
+                        android:layout_toRightOf="@+id/user_mobile_img"
+                        android:text="@string/contact_number"
+                        android:textColor="@color/grey"
+
+                        android:textSize="@dimen/_12sdp"
+                        app:fontAssetName="@string/font_regular" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_mobile_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_mobile_txt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/user_mobile_img"
+                        android:layout_toRightOf="@+id/user_mobile_img"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="1234567890"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        app:edittextfont="@string/font_medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/user_mobile_ext"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@android:color/darker_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_email_img"
+                        android:layout_width="23dp"
+                        android:layout_height="21dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/contact" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_email_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_email_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/email"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_email_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_email_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_email_txt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/user_email_img"
+                        android:layout_toRightOf="@+id/user_email_img"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|start"
+                        android:hint="votivephp.raveena@gmail.com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        app:edittextfont="@string/font_medium" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/user_email_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_address_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/address"
+                        android:layout_marginStart="@dimen/_10sdp"/>
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_address_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_address_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/address"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_address_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/user_address_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_address_txt"
+                        android:layout_toRightOf="@+id/user_address_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="India"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_address_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/user_address_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_city_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/city"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_city_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_city_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/city"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+                        android:layout_toEndOf="@+id/user_city_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/user_city_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_city_txt"
+                        android:layout_toRightOf="@+id/user_city_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="Indore"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_city_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/user_city_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_state_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/city"
+                        android:layout_marginStart="@dimen/_10sdp"/>
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_state_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_state_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/state"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_state_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/user_state_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_state_txt"
+                        android:layout_toRightOf="@+id/user_state_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="Indore"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_state_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/user_state_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/user_postal_code_img"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/postcode"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomTextView
+                        android:id="@+id/user_postal_code_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_postal_code_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/postal_code"
+                        app:fontAssetName="@string/font_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/grey"
+
+                        android:layout_toEndOf="@+id/user_postal_code_img"
+                        android:layout_marginStart="@dimen/_10sdp" />
+
+                    <com.foodforme.vendore.customwidget.CustomEditText
+                        android:id="@+id/user_postal_code_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/user_postal_code_txt"
+                        android:layout_toRightOf="@+id/user_postal_code_img"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:hint="452001"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        app:edittextfont="@string/font_medium"
+                        android:layout_toEndOf="@+id/user_postal_code_img" />
+
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/user_postal_code_ext"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

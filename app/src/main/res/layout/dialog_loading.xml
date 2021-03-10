@@ -1,0 +1,62 @@
+<!--
+<LinearLayout android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_90sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_border"
+    android:gravity="center"
+    android:padding="@dimen/_5sdp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/progressdialog1" />
+
+    <com.foodforme.vendore.customwidget.CustomTextView
+        android:id="@+id/progressMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/loading"
+        android:textColor="@color/color_red"
+        android:textSize="@dimen/_12sdp"
+        android:layout_gravity="center" />
+
+</LinearLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.foodforme.vendore.utils.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:loading_color="@color/colorPrimary"
+        app:loading_speed="13"
+        app:loading_width="4dp" />
+
+    <com.foodforme.vendore.utils.GraduallyTextView
+        android:id="@+id/graduallyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="@dimen/_16sdp"
+        android:text="L O A D I N G..."
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_language_bg"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_30sdp"
+        android:gravity="center|start"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selection"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:src="@drawable/logo"
+        android:tint="@color/new_yellow" />
+
+
+    <RelativeLayout
+        android:id="@+id/email_pass_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_20sdp">
+
+
+        <!--android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"-->
+
+        <RelativeLayout
+            android:id="@+id/welcome_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp">
+
+            <com.foodforme.vendore.customwidget.CustomTextView
+                android:id="@+id/welcome_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:text="@string/welcome"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30sdp"
+                app:fontAssetName="@string/font_regular" />
+
+
+            <com.foodforme.vendore.customwidget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_txt"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="start|center"
+                android:text="@string/sign_in_continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:fontAssetName="@string/font_medium" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome_layout"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bg">
+
+
+                <ImageView
+                    android:id="@+id/email_img"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/email" />
+
+                <com.foodforme.vendore.customwidget.CustomEditText
+                    android:id="@+id/user_id_mobile_ext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/email_img"
+                    android:layout_toRightOf="@+id/email_img"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|start"
+                    android:hint="@string/user_id_email"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/_12sdp"
+                    app:edittextfont="@string/font_regular" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bg">
+
+                <ImageView
+                    android:id="@+id/password_img"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/lock" />
+
+                <com.foodforme.vendore.customwidget.CustomEditText
+                    android:id="@+id/password_ext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/password_img"
+                    android:layout_toRightOf="@+id/password_img"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|start"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/_12sdp"
+                    app:edittextfont="@string/font_regular" />
+
+            </RelativeLayout>
+
+
+            <com.foodforme.vendore.customwidget.CustomTextView
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:background="@drawable/blurr_back"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:fontAssetName="@string/font_regular" />
+
+            <com.foodforme.vendore.customwidget.CustomTextView
+                android:id="@+id/forgot_password_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="right|center"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:fontAssetName="@string/font_regular" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

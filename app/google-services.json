@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "417290949365",
+    "project_id": "foodformevendore",
+    "storage_bucket": "foodformevendore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417290949365:android:8a765de2d8ded6657aabbc",
+        "android_client_info": {
+          "package_name": "com.foodforme.vendore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417290949365-30vs4ve2r5p3m843unte8h8mvbo9b4u3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodforme.vendore",
+            "certificate_hash": "aa9992e2e750a6fe8442be600911474bbcbfdb6b"
+          }
+        },
+        {
+          "client_id": "417290949365-tqh612s4bi90gk018428cc8bu9ftqnd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_FTpSTyzV0sFqJCl7qTVGYjt_Avg5Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417290949365-tqh612s4bi90gk018428cc8bu9ftqnd1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

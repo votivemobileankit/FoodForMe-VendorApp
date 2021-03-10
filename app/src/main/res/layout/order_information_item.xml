@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/grand_total_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:fontAssetName="@string/font_medium" />
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/itme_size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:fontAssetName="@string/font_medium" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/size_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grand_total_relative"
+        android:layout_marginTop="@dimen/_5sdp">
+
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/order_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:fontAssetName="@string/font_medium" />
+
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:fontAssetName="@string/font_medium" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/size_relative"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@android:color/darker_gray" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mAddonList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:nestedScrollingEnabled="false"
+        android:visibility="visible" />
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/mAddonList"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/specail_addon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/special_addons"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:fontAssetName="@string/font_medium" />
+
+        <com.foodforme.vendore.customwidget.CustomTextView
+            android:id="@+id/specail_add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="No"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:fontAssetName="@string/font_medium" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

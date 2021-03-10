@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vendore</string>
+    <!-- <string name="google_API_Key">AIzaSyDy0uTv_nWCNckxA2thv9F0NUVLR1XDzec</string>-->
+    <string name="google_API_Key">AIzaSyC5_FTpSTyzV0sFqJCl7qTVGYjt_Avg5Nw</string>
+
+
+    <string name="font_welcome_">AvenirLTStd-Roman.otf</string>
+    <string name="font_light_regular">AvenirLTStd-Book.otf</string>
+    <string name="font_regular">AvenirLTStd-Light.otf</string>
+    <string name="font_medium">AvenirLTStd-Medium.otf</string>
+
+
+    <string-array name="status_class">
+        <item>الكل</item>
+        <item>تم التوصيل</item>
+        <item>ألغيت</item>
+
+    </string-array>
+
+
+    <!--Select language Activity-->
+    <string name="select_language_txt">اختار اللغة</string>
+    <string name="arabic">عربي</string>
+    <string name="german">German</string>
+    <string name="english">English</string>
+    <string name="English_Language_Selected">اللغة الإنجليزية المختارة</string>
+    <string name="Arabic_Language_Selected">اللغة العربية المختارة</string>
+    <!--Login Activity-->
+    <string name="welcome">مرحبا بعودتك</string>
+    <string name="sign_in_continue">تسجيل الدخول للمتابعة</string>
+    <string name="user_id_email">البريد الالكتروني/رقم الجوال</string>
+    <string name="password">كلمة السر</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forgot_password">هل نسيت كلمة المرور؟</string>
+    <!--Forget pass -->
+    <string name="otubli_vendore_txt">أوتوبلي فاندور</string>
+    <string name="submit">إرسال</string>
+    <string name="no_order_found">لا يوجد طلب متاح!</string>
+
+    <!--Main Activity-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="neworder">طلب جديد</string>
+    <string name="inprogress">قيد التنفيذ</string>
+
+
+    <!--User Profile Activity-->
+    <string name="first_name">الاسم الاول</string>
+    <string name="last_name">الاسم الاخير</string>
+    <string name="contact_number">رقم الاتصال</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="address">العنوان</string>
+    <string name="city">المدينة</string>
+    <string name="state">الدولة</string>
+    <string name="postal_code">الرمز البريدي</string>
+
+
+    <string name="internetOff">غير قادر على الاتصال. يرجى التحقق من اتصالك بالإنترنت  حاول مرة أخرى في وقت لاحق.</string>
+
+
+    <string name="Camera_permission">مطلوب الوصول إلى الكاميرا</string>
+    <string name="Camera_permission_txt">Please give Otubli access to this \n device\'s camera to click your pictures </string>
+    <string name="Cancel">إلغاء</string>
+    <string name="OK">موافق</string>
+    <string name="Take_Photo">تصوير</string>
+    <string name="Choose_from_Library">معرض</string>
+
+    <!--order_status Activity-->
+    <string name="update_order_status">حالة التحديث</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="confirm_order">تاكيد الطلب</string>
+    <string name="order_detail">تفاصيل الطلب</string>
+    <string name="ready_order">الطلب جاهز</string>
+    <string name="Order_acceped_by_driver">تم قبول الطلب من السائق</string>
+    <string name="Order_picked_by_driver">تم اخذ الطلب من قبل السائق</string>
+    <string name="Order_On_the_way">الطلب في الطريق</string>
+    <string name="Order_Cancel">تم الغاء الطلب</string>
+    <string name="Order_Delivered">تم وصول الطلب</string>
+
+    <!--Notification Activity-->
+    <string name="notification">اشعار</string>
+
+
+    <!--Order History Activity-->
+    <string name="order_history">تاريخ الطلب</string>
+    <string name="view_detail">عرض التفاصيل</string>
+    <string name="payment_type">طريقة الدفع</string>
+
+
+    <!--Order History Activity-->
+    <string name="setting">اعداد</string>
+
+    <!--Wallet Activity-->
+    <string name="Wallet">محفظة نقود</string>
+    <string name="Wallet_balance">ميزانية المحفظة</string>
+    <string name="add_money_to_wallet">أضافه أموال إلى محفظه Otlubli</string>
+    <string name="send_wallet_balance_to_bank">إرسال رصيد المحفظة إلى البنك</string>
+    <string name="transactionhistory">تاريخ الحركة</string>
+    <string name="payment_receive_from">الدفعة المستلمة من:</string>
+    <string name="forgetpass_email_send">تم إرسال طلبك بنجاح ، سيقوم المشرف بالاتصال بك قريبا!</string>
+
+    <!--Snackbar-->
+    <string name="please_check_internet">يرجى التحقق من اتصالك بالانترنت...</string>
+    <string name="userid_mobile_empty">معرف المستخدم / رقم الجوال لايمكن ان يكون فارغا</string>
+    <string name="email_empty">لا يمكن ان يكون البريد الكتروني فارغا</string>
+    <string name="Valid_email">يرجى تقديم معرف بريد الكتروني صالح</string>
+    <string name="password_empty">لا يمكن ان تكون كلمه المرور فارغه</string>
+    <string name="password_not_valid">يجب أن يحتوي على رقم واحد على الأقل وحرف واحد كبير وحرف صغير وعلامة ترقيم ، وما لا يقل عن 8 أحرف</string>
+    <string name="password_notvalid">يجب ان تحتوي علي الحد الأدنى 8 حرف</string>
+    <string name="First_name">لا يمكن ان يكون الاسم الأول فارغا</string>
+    <string name="lastname">لا يمكن ان يكون الاسم الأخير فارغا</string>
+    <string name="user_address">لا يمكن ان يكون العنوان فارغا</string>
+    <string name="user_city">المدينة لا يمكن ان تكون فارغه</string>
+    <string name="user_state">لا يمكن ان تكون الدولة فارغه</string>
+    <string name="user_postal_code">لا يمكن أن يكون الرمز البريدي فارغًا</string>
+    <string name="loading">جار التحميل...</string>
+
+
+    <string name="enter_reson">ادخل السبب</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vendor_orderId">رقم الطلب</string>
+    <string name="orderId">رقم الطلب</string>
+    <string name="vendor_orderamt">قيمة الطلب</string>
+    <string name="vendor_orderstatus">حالة الطلب</string>
+    <string name="vendor_home">القائمة الرئيسية</string>
+    <string name="vendor_profile">الصفحة الشخصية</string>
+    <string name="vendor_wallet">محفظة اطلبلي الالكترونية</string>
+    <string name="history">تاريخ الطلب</string>
+    <string name="vendor_setting">اعداد</string>
+    <string name="vendor_notify">اشعارات</string>
+    <string name="about">من نحن</string>
+    <string name="contact">اتصل بنا</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="payment">الدفع</string>
+    <string name="order_info">معلومات الطلب</string>
+    <string name="quantity">الكمية:</string>
+    <string name="accept">قبول</string>
+    <string name="reject">رفض</string>
+    <string name="logMsg">هل تريد بالتاكيد تسجيل الخروج ؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="delivered">وصل</string>
+    <string name="account_holder_name">اسم صاحب الحساب</string>
+    <string name="bank_name">اسم البنك</string>
+    <string name="branch_name">فرع شجرة</string>
+    <string name="accnt_number">رقم حساب</string>
+    <string name="ifsc">كود IFSC</string>
+    <string name="addBankdetail">إضافة تفاصيل البنك</string>
+    <string name="onDelivery">عند التسليم</string>
+    <string name="Enter_Account_Holder_Name">أدخل اسم صاحب الحساب</string>
+    <string name="Enter_Bank_Name">أدخل اسم البنك</string>
+    <string name="Enter_Branch_name">أدخل اسم الفرع</string>
+
+    <string name="Enter_Account_Number">أدخل رقم الحساب</string>
+    <string name="Enter_Ifsc_Code">أدخل رمز Ifsc</string>
+    <string name="Save">حفظ</string>
+
+    <string name="User_name">اسم المستخدم</string>
+    <string name="no_more_data">عذرا ، لا يوجد المزيد من البيانات المتاحة!</string>
+    <string name="enter_reason">الرجاء إدخال السبب</string>
+    <string name="Delivery_Time">موعد التسليم </string>
+    <string name="Notification_status_not_change">حالة الإخطار لا تتغير</string>
+    <string name="Server_not_responding">الخادم لا يستجيب.</string>
+
+    <string name="Please_try_again">الرجاء معاودة المحاولة في وقت لاحق.</string>
+    <string name="cancelled">ألغيت</string>
+
+
+    <string name="Wallet_transaction">محفظة المعاملات</string>
+    <string name="Paid_by_admin">يتحملها المشرف</string>
+    <string name="Bank_transaction">المعاملات المصرفية</string>
+    <string name="Transfer_request_is_panding">طلب نقل معلق</string>
+    <string name="Transfer_request_rejected">تم رفض طلب النقل</string>
+    <string name="Transfer_completed">اكتمل النقل</string>
+
+
+    <string name="txtItemSubTotal">المجموع الفرعي:</string>
+    <string name="txtDiscount">الخصم:</string>
+    <string name="txtDeliveryFees">رسوم التوصيل:</string>
+    <string name="txtTip">Tip:</string>
+    <string name="txtTax">ضريبة المبيعات:</string>
+    <string name="txtTotal">المجموع</string>
+    <string name="txtGrandTotal">المجموع الكلي</string>
+
+    <string name="Request_Amount">طلب المبلغ:</string>
+    <string name="Enter_Amount">الرجاء إدخال المبلغ</string>
+    <string name="Apply_Filter">تطبيق مرشح</string>
+
+    <string name="From">من عند</string>
+    <string name="Choose_Date">اختر موعدا</string>
+    <string name="To">إلى</string>
+    <string name="special_addons">Special Note</string>
+    <string name="price">CHF </string>
+    <string name="size">Size1 </string>
+</resources>

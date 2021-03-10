@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_history_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.OrderHistoryActivity">
+
+    <!-- <include android:id="@+id/toolbar"
+          layout="@layout/toolbar2" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_lay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/text_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/From"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/date_pick1"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/text_from"
+                android:background="@drawable/datepick_file"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/Choose_Date"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:id="@+id/text_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@id/date_pick1"
+                android:text="@string/To"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/date_pick2"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/text_to"
+                android:background="@drawable/datepick_file"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/Choose_Date"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/order_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_from"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:text="@string/order_status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/date_pick1"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_toEndOf="@+id/order_st"
+                android:background="@drawable/datepick_file"
+                android:entries="@array/status_class" />
+
+            <Button
+                android:id="@+id/apply_filter"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/date_pick2"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_toEndOf="@id/spinner"
+                android:background="@drawable/red_bg"
+                android:text="@string/Apply_Filter"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_lay"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/order_historylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

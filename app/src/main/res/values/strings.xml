@@ -1,0 +1,203 @@
+<resources>
+
+
+    <string-array name="status_class">
+        <item>All</item>
+        <item>Delivered</item>
+        <item>Cancelled</item>
+
+    </string-array>
+    <string name="app_name">Vendore</string>
+
+    <string name="google_API_Key">AIzaSyC5_FTpSTyzV0sFqJCl7qTVGYjt_Avg5Nw</string>
+
+    <string name="font_welcome_">AvenirLTStd-Roman.otf</string>
+    <string name="font_light_regular">AvenirLTStd-Book.otf</string>
+    <string name="font_regular">AvenirLTStd-Light.otf</string>
+    <string name="font_medium">AvenirLTStd-Medium.otf</string>
+
+
+    <string name="select_language_txt">Select Language</string>
+    <string name="arabic">عربي</string>
+    <string name="german">German</string>
+    <string name="english">English</string>
+    <string name="English_Language_Selected">English Language Selected</string>
+    <string name="Arabic_Language_Selected">Arabic Language Selected</string>
+
+
+    <!--Login Activity-->
+    <string name="welcome">WelCome back</string>
+    <string name="sign_in_continue">Sign in to continue</string>
+    <string name="user_id_email">Email / Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="login">Log in</string>
+    <string name="forgot_password">Forgot password?</string>
+    <!--    <string name="forgetpass_email_send">Please check password link has been send to your email address.</string>-->
+    <string name="forgetpass_email_send">Your request has been sent successfully, the admin will contact you soon!</string>
+
+
+    <!--Forget pass -->
+    <string name="otubli_vendore_txt">FoodForMe Vendor</string>
+    <string name="submit">Submit</string>
+    <string name="no_order_found">There is no Order Available!</string>
+
+    <!--Main Activity-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="neworder">New order</string>
+    <string name="inprogress">In progress</string>
+
+
+    <!--User Profile Activity-->
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="contact_number">Contact number</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="postal_code">Postal Code</string>
+
+
+    <string name="internetOff">Unable to connect. Please check your Internet Connection &amp; try again later.</string>
+
+
+    <string name="Camera_permission">Camera access required</string>
+    <string name="Camera_permission_txt">Please give Otubli access to this \n device\'s camera to click your pictures </string>
+    <string name="Cancel">Cancel</string>
+    <string name="OK">Ok</string>
+    <string name="Take_Photo">Take Photo</string>
+    <string name="Choose_from_Library">Gallery</string>
+
+
+    <!--order_status Activity-->
+    <string name="update_order_status">Update Status</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_detail">Order Details</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="ready_order">Order Ready</string>
+    <string name="Order_acceped_by_driver">Order acceped by driver</string>
+    <string name="Order_picked_by_driver">Order picked by driver</string>
+    <string name="Order_On_the_way">Order On the way</string>
+    <string name="Order_Cancel">Order Cancel</string>
+    <string name="Order_Delivered">Order Delivered</string>
+
+
+    <!--Notification Activity-->
+    <string name="notification">Notification</string>
+
+
+    <!--Order History Activity-->
+    <string name="order_history">Order History</string>
+    <string name="view_detail">View Detail</string>
+    <string name="payment_type">Payment Type</string>
+
+
+    <!--Order History Activity-->
+    <string name="setting">Setting</string>
+
+
+    <!--Wallet Activity-->
+    <string name="Wallet">Wallet</string>
+    <string name="add_money_to_wallet">Send Wallet Balance to Bank</string>
+    <string name="Wallet_balance">Wallet Balance</string>
+    <string name="send_wallet_balance_to_bank">Send Wallet Balance to Bank</string>
+    <string name="transactionhistory">Transaction history</string>
+    <string name="payment_receive_from">Payment Received from:</string>
+
+
+    <!--Snackbar-->
+    <string name="please_check_internet">Please check your internet connection...</string>
+    <string name="userid_mobile_empty">Email / Mobile no. cannot be empty</string>
+    <string name="email_empty">Email cannot be empty</string>
+    <string name="Valid_email">Please provide a valid email ID</string>
+    <string name="password_empty">Password cannot be empty</string>
+    <string name="password_not_valid">Must contain at least one number and one uppercase and lowercase and punctuation mark</string>
+    <string name="password_notvalid">Must contain minimum 8 character</string>
+
+    <string name="First_name">First name cannot be empty</string>
+    <string name="lastname">Last name cannot be empty</string>
+    <string name="user_address">Address cannot be empty</string>
+    <string name="user_city">City cannot be empty</string>
+    <string name="user_state">State cannot be empty</string>
+    <string name="user_postal_code">Postal code cannot be empty</string>
+    <string name="loading">Loading...</string>
+    <string name="enter_reson">Enter Reason</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vendor_orderId">Order Id</string>
+    <string name="orderId">Order id</string>
+    <string name="vendor_orderamt">Order Amount</string>
+    <string name="vendor_orderstatus">Order Status</string>
+    <string name="vendor_home">Home</string>
+    <string name="vendor_profile">Profile</string>
+    <string name="vendor_wallet">Wallet</string>
+    <string name="history">Order History</string>
+    <string name="vendor_setting">Setting</string>
+    <string name="vendor_notify">Notification</string>
+    <string name="about">About Us</string>
+    <string name="contact">Contact Us</string>
+    <string name="logout">LogOut</string>
+    <string name="payment">Payment</string>
+    <string name="order_info">Order Information</string>
+    <string name="quantity">Qty:</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="logMsg">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delivered">Delivered</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch_name">Branch</string>
+    <string name="accnt_number">Account Number</string>
+    <string name="ifsc">IFSC Code</string>
+    <string name="addBankdetail">Add Bank Details</string>
+    <string name="onDelivery">On Delivery</string>
+
+    <string name="Enter_Account_Holder_Name">Please Enter Account Holder Name</string>
+    <string name="Enter_Bank_Name">Please Enter Bank Name</string>
+    <string name="Enter_Branch_name">Please Enter Branch name</string>
+
+    <string name="Enter_Account_Number">Please Enter Account Number</string>
+    <string name="Enter_Ifsc_Code">Please Enter Ifsc Code</string>
+    <string name="Save">Save</string>
+
+    <string name="User_name">User Name</string>
+    <string name="no_more_data">Sorry, no more data available!</string>
+    <string name="enter_reason">Please enter reason</string>
+    <string name="Delivery_Time">Delivery Time </string>
+    <string name="Notification_status_not_change">Notification status not change</string>
+    <string name="Server_not_responding">The Server is not responding.</string>
+
+    <string name="Please_try_again">Please try again later.</string>
+    <string name="cancelled">Cancelled</string>
+
+    <string name="Wallet_transaction">Wallet transaction</string>
+    <string name="Paid_by_admin">Paid by admin</string>
+    <string name="Bank_transaction">Bank transaction</string>
+    <string name="Transfer_request_is_panding">Transfer request is panding</string>
+    <string name="Transfer_request_rejected">Transfer request rejected</string>
+    <string name="Transfer_completed">Transfer completed</string>
+
+
+    <string name="txtItemSubTotal">Sub Total:</string>
+    <string name="txtDiscount">Discount:</string>
+    <string name="txtDeliveryFees">Delivery Fee:</string>
+    <string name="txtTip">Tip:</string>
+    <string name="txtTax">Sales Tax:</string>
+    <string name="txtTotal">Total:</string>
+    <string name="txtGrandTotal">Grand Total:</string>
+    <string name="Request_Amount">Request Amount:</string>
+    <string name="Enter_Amount">Please Enter Amount</string>
+    <string name="Apply_Filter">Apply Filter</string>
+    <string name="From">From</string>
+    <string name="Choose_Date">Choose Date</string>
+    <string name="To">To</string>
+    <string name="special_addons">Special Note</string>
+    <string name="price">CHF</string>
+    <string name="size">Size- </string>
+
+</resources>

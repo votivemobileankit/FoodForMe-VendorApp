@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginBottom">02dp</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
+
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorAccent">@color/color_red</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+
+
+   <!-- <style name="TransparentProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/color_red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+
+    </style>
+
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/color_red</item>
+        <item name="android:bottomDark">@color/color_red</item>
+        <item name="android:bottomMedium">@color/color_red</item>
+        <item name="android:centerBright">@color/color_red</item>
+        <item name="android:centerDark">@color/color_red</item>
+        <item name="android:centerMedium">@color/color_red</item>
+        <item name="android:fullBright">@color/color_red</item>
+        <item name="android:fullDark">@color/color_red</item>
+        <item name="android:topBright">@color/color_red</item>
+        <item name="android:topDark">@color/color_red</item>
+    </style>-->
+
+    <style name="CustomAlertDialogStyle" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="SwitchCompatTheme" >
+        <item name="colorControlActivated">@color/color_red</item>
+    </style>
+
+</resources>

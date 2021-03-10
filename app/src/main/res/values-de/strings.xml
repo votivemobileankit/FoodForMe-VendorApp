@@ -1,0 +1,202 @@
+<resources>
+
+
+    <string-array name="status_class">
+        <item>All</item>
+        <item>Delivered</item>
+        <item>Cancelled</item>
+
+    </string-array>
+    <string name="app_name">Vendor</string>
+    <string name="google_API_Key">AIzaSyC5_FTpSTyzV0sFqJCl7qTVGYjt_Avg5Nw</string>
+
+    <string name="font_welcome_">AvenirLTStd-Roman.otf</string>
+    <string name="font_light_regular">AvenirLTStd-Book.otf</string>
+    <string name="font_regular">AvenirLTStd-Light.otf</string>
+    <string name="font_medium">AvenirLTStd-Medium.otf</string>
+
+
+    <string name="select_language_txt">Select Language</string>
+    <string name="arabic">عربي</string>
+    <string name="german">German</string>
+    <string name="english">English</string>
+    <string name="English_Language_Selected">English Language Selected</string>
+    <string name="Arabic_Language_Selected">Arabic Language Selected</string>
+
+
+    <!--Login Activity-->
+    <string name="welcome">Willkommen zurück</string>
+    <string name="sign_in_continue">Melden Sie sich an, um fortzufahren</string>
+    <string name="user_id_email">Email / Handynummer</string>
+    <string name="password">Passwort</string>
+    <string name="login">Anmeldung</string>
+    <string name="forgot_password">Passwort vergessen?</string>
+    <!--    <string name="forgetpass_email_send">Please check password link has been send to your email address.</string>-->
+    <string name="forgetpass_email_send">Ihre Anfrage wurde erfolgreich gesendet, der Administrator wird Sie bald kontaktieren!</string>
+
+
+    <!--Forget pass -->
+    <string name="otubli_vendore_txt">Food For Me Vendor</string>
+    <string name="submit">einreichen</string>
+    <string name="no_order_found">Es ist keine Bestellung verfügbar!</string>
+
+    <!--Main Activity-->
+    <string name="navigation_drawer_open">Navigationsschublade öffnen</string>
+    <string name="navigation_drawer_close">Navigationsschublade schließen</string>
+    <string name="neworder">Neue Ordnung</string>
+    <string name="inprogress">In Bearbeitung</string>
+
+
+    <!--User Profile Activity-->
+    <string name="first_name">Vorname</string>
+    <string name="last_name">Familienname, Nachname</string>
+    <string name="contact_number">Kontakt Nummer</string>
+    <string name="email">Email</string>
+    <string name="address">Adresse</string>
+    <string name="city">Stadt</string>
+    <string name="state">Zustand</string>
+    <string name="postal_code">Postleitzahl</string>
+
+
+    <string name="internetOff">Verbindung konnte nicht hergestellt werden. Bitte überprüfen Sie Ihre Internetverbindung &amp;  versuchen Sie es später erneut.</string>
+
+
+    <string name="Camera_permission">Kamerazugriff erforderlich</string>
+    <string name="Camera_permission_txt">Bitte geben Sie Otubli Zugriff auf die Kamera dieses \n Geräts, um auf Ihre Bilder zu klicken </string>
+    <string name="Cancel">Stornieren</string>
+    <string name="OK">Ok</string>
+    <string name="Take_Photo">Foto machen</string>
+    <string name="Choose_from_Library">Galerie</string>
+
+
+    <!--order_status Activity-->
+    <string name="update_order_status">Update Status</string>
+    <string name="order_status">Bestell status</string>
+    <string name="order_detail">Bestell details</string>
+    <string name="confirm_order">Bestellung bestätigen</string>
+    <string name="ready_order">Bestellbereit</string>
+    <string name="Order_acceped_by_driver">Bestellung vom Fahrer angenommen</string>
+    <string name="Order_picked_by_driver">Bestellung vom Fahrer abgeholt</string>
+    <string name="Order_On_the_way">Bestellen Sie unterwegs</string>
+    <string name="Order_Cancel">Bestellung stornieren</string>
+    <string name="Order_Delivered">Bestellung geliefert</string>
+
+
+    <!--Notification Activity-->
+    <string name="notification">Benachrichtigung</string>
+
+
+    <!--Order History Activity-->
+    <string name="order_history">Bestellverlauf</string>
+    <string name="view_detail">Im Detail sehen</string>
+    <string name="payment_type">Zahlungsart</string>
+
+
+    <!--Order History Activity-->
+    <string name="setting">Rahmen</string>
+
+
+
+    <!--Wallet Activity-->
+    <string name="Wallet">Brieftasche</string>
+    <string name="add_money_to_wallet">Brieftaschenguthaben an Bank senden</string>
+    <string name="Wallet_balance">Brieftaschenguthaben</string>
+    <string name="send_wallet_balance_to_bank">Brieftaschenguthaben an Bank senden</string>
+    <string name="transactionhistory">Verlauf der Transaktionen</string>
+    <string name="payment_receive_from">Zahlung erhalten von:</string>
+
+
+    <!--Snackbar-->
+    <string name="please_check_internet">Bitte überprüfe deine Internetverbindung...</string>
+    <string name="userid_mobile_empty">Email / Handynr. kann nicht leer sein</string>
+    <string name="email_empty">E-Mail darf nicht leer sein</string>
+    <string name="Valid_email">Bitte geben Sie eine gültige E-Mail-ID an</string>
+    <string name="password_empty">Passwort kann nicht leer sein</string>
+    <string name="password_not_valid">Muss mindestens eine Zahl und einen Groß- und Kleinbuchstaben sowie ein Interpunktionszeichen enthalten</string>
+    <string name="password_notvalid">Muss mindestens 8 Zeichen enthalten</string>
+
+    <string name="First_name">Der Vorname darf nicht leer sein</string>
+    <string name="lastname">Nachname darf nicht leer sein</string>
+    <string name="user_address">Die Adresse darf nicht leer sein</string>
+    <string name="user_city">Stadt kann nicht leer sein</string>
+    <string name="user_state">Zustand kann nicht leer sein</string>
+    <string name="user_postal_code">Die Postleitzahl darf nicht leer sein</string>
+    <string name="loading">Wird geladen...</string>
+    <string name="enter_reson">Grund eingeben</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vendor_orderId">Order Id</string>
+    <string name="orderId">Order id</string>
+    <string name="vendor_orderamt">Bestellbetrag</string>
+    <string name="vendor_orderstatus">Bestellstatus</string>
+    <string name="vendor_home">Zuhause</string>
+    <string name="vendor_profile">Profil</string>
+    <string name="vendor_wallet">Brieftasche</string>
+    <string name="history">Bestellverlauf</string>
+    <string name="vendor_setting">Rahmen</string>
+    <string name="vendor_notify">Benachrichtigung</string>
+    <string name="about">Über uns</string>
+    <string name="contact">Kontaktiere uns</string>
+    <string name="logout">Ausloggen</string>
+    <string name="payment">Zahlung</string>
+    <string name="order_info">Bestellinformationen</string>
+    <string name="quantity">Qty:</string>
+    <string name="accept">Akzeptieren</string>
+    <string name="reject">Ablehnen</string>
+    <string name="logMsg">Sind Sie sicher, dass Sie sich abmelden möchten?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="delivered">Geliefert</string>
+    <string name="account_holder_name">Name des Kontoinhabers</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch_name">Branch</string>
+    <string name="accnt_number">Account nummer</string>
+    <string name="ifsc">IFSC Code</string>
+    <string name="addBankdetail">Bankdaten hinzufügen</string>
+    <string name="onDelivery">On Delivery</string>
+
+    <string name="Enter_Account_Holder_Name">Bitte geben Sie den Namen des Kontoinhabers ein</string>
+    <string name="Enter_Bank_Name">Bitte geben Sie den Banknamen ein</string>
+    <string name="Enter_Branch_name">Bitte geben Sie den Filialnamen ein</string>
+
+    <string name="Enter_Account_Number">Bitte geben Sie die Konto nummer ein</string>
+    <string name="Enter_Ifsc_Code">Please Enter Ifsc Code</string>
+    <string name="Save">Save</string>
+
+    <string name="User_name">Nutzer name</string>
+    <string name="no_more_data">Leider sind keine weiteren Daten verfügbar!</string>
+    <string name="enter_reason">Bitte geben Sie den Grund ein</string>
+    <string name="Delivery_Time">Lieferzeit </string>
+    <string name="Notification_status_not_change">Benachrichtigungs status nicht ändern</string>
+    <string name="Server_not_responding">Der Server antwortet nicht.</string>
+
+    <string name="Please_try_again">Bitte versuchen Sie es später noch einmal.</string>
+    <string name="cancelled">Abgesagt</string>
+
+    <string name="Wallet_transaction">Brieftaschen-Transaktion</string>
+    <string name="Paid_by_admin">Bezahlt von admin</string>
+    <string name="Bank_transaction">Bank Transaktion</string>
+    <string name="Transfer_request_is_panding">Übertragungsanforderung ist panding</string>
+    <string name="Transfer_request_rejected">Übertragungsanforderung abgelehnt</string>
+    <string name="Transfer_completed">Übertragung abgeschlossen</string>
+
+
+    <string name="txtItemSubTotal">Zwischensumme:</string>
+    <string name="txtDiscount">Rabatt:</string>
+    <string name="txtDeliveryFees">Liefergebühr:</string>
+    <string name="txtTip">Trinkgeld:</string>
+    <string name="txtTax">Mehrwertsteuer :</string>
+    <string name="txtTotal">Gesamt:</string>
+    <string name="txtGrandTotal">Gesamtsumme:</string>
+    <string name="Request_Amount">Betrag anfordern:</string>
+    <string name="Enter_Amount">Bitte Betrag eingeben</string>
+    <string name="Apply_Filter">Filter anwenden</string>
+    <string name="From">Von</string>
+    <string name="Choose_Date">Wählen Sie Datum</string>
+    <string name="To">Zu</string>
+    <string name="special_addons">Special Note</string>
+    <string name="price">CHF</string>
+    <string name="size">Size -</string>
+</resources>
