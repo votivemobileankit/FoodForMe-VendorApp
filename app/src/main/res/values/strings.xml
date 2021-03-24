@@ -26,7 +26,7 @@
 
 
     <!--Login Activity-->
-    <string name="welcome">WelCome back</string>
+    <string name="welcome">Welcome back</string>
     <string name="sign_in_continue">Sign in to continue</string>
     <string name="user_id_email">Email / Mobile Number</string>
     <string name="password">Password</string>

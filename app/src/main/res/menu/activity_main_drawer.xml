@@ -23,7 +23,7 @@
             android:title="@string/vendor_notify" />
         <item
             android:id="@+id/nav_aboutUs"
-            android:title="@string/about"/>
+            android:title="@string/about" />
         <item
             android:id="@+id/nav_contactUs"
             android:title="@string/contact" />

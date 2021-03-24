@@ -45,9 +45,9 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
 
         preferences = mContext.getSharedPreferences("Vendor", MODE_PRIVATE);
 
-        viewHolder.player_name.setText("Otlubli");
+        viewHolder.player_name.setText("FoodForMe");
         viewHolder.user_name.setText("vendor");
-        viewHolder.transaction_amount.setText("NIS NIS NIS ");
+        viewHolder.transaction_amount.setText(mContext.getResources().getString(R.string.price) );
         viewHolder.transaction_date_txt.setText("22-10-2019");
 
     }

@@ -49,7 +49,7 @@ public class InProgressAdapter extends RecyclerView.Adapter<InProgressAdapter.Vi
         viewHolder.restrorent_name.setText(Inprogress_orderlist.get(position).getRest_name());
         viewHolder.order_delivery_time.setText(Inprogress_orderlist.get(position).getOrder_date_time());
         viewHolder.order_id.setText("#" + Inprogress_orderlist.get(position).getUnique_order_id());
-        viewHolder.order_amount.setText(mContext.getResources().getString(R.string.price)  + Inprogress_orderlist.get(position).getOrder_total());
+        viewHolder.order_amount.setText(mContext.getResources().getString(R.string.price) +" " + Inprogress_orderlist.get(position).getOrder_total());
         viewHolder.order_payment_type.setText(Inprogress_orderlist.get(position).getPayment_type());
         viewHolder.order_delivery_address.setText(Inprogress_orderlist.get(position).getOrder_deliveryadd1());
 

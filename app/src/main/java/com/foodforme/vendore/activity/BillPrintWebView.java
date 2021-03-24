@@ -28,11 +28,10 @@ public class BillPrintWebView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_print_web_view);
         // Initializing the WebView
-        final WebView webView = (WebView) findViewById(R.id.webViewMain);
+        final WebView webView = findViewById(R.id.webViewMain);
         url = getIntent().getStringExtra("url");
         // Initializing the Button
-        Button savePdfBtn = (Button) findViewById(R.id.savePdfBtn);
-
+        Button savePdfBtn = findViewById(R.id.savePdfBtn);
         // Setting we View Client
         webView.setWebViewClient(new WebViewClient() {
             @Override

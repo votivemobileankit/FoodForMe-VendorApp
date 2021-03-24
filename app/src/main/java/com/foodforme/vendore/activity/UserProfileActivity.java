@@ -36,6 +36,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 public class UserProfileActivity extends AppCompatActivity {
     private static final String TAG = UserProfileActivity.class.getSimpleName();
@@ -60,16 +61,16 @@ public class UserProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
         progressDialog = TransparentProgressDialog.getInstance();
         preferences = getSharedPreferences("Vendor", MODE_PRIVATE);
-
         mContext = this;
         jsonObject = new JSONObject();
 
      /*   Toolbar toolbar = view.findViewById(R.id.toolbar);
         ((MainActivity) getActivity()).getSupportActionBar().hide();
-
         ((MainActivity) getActivity()).setSupportActionBar(toolbar);*/
+
         First_name_ext = findViewById(R.id.First_name_ext);
         last_name_ext = findViewById(R.id.last_name_ext);
         user_mobile_ext = findViewById(R.id.user_mobile_ext);
@@ -84,17 +85,14 @@ public class UserProfileActivity extends AppCompatActivity {
         back_btn = findViewById(R.id.back_btn);
         back_icon = findViewById(R.id.back_icon);
         User_profile_relative = findViewById(R.id.User_profile_relative);
-
         if (Utility.getSharedPreferences(mContext, Constant.Language) != null) {
             if (Utility.getSharedPreferences(mContext, Constant.Language).equals("ar")) {
                 back_icon.setScaleX(-1);
             }
         }
 
-
         if (Utility.getSharedPreferences(mContext, Constant.vendor_name) != null) {
             First_name_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_name));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_last_name) != null) {
             last_name_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_last_name));
@@ -102,29 +100,22 @@ public class UserProfileActivity extends AppCompatActivity {
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_mob_no) != null) {
             user_mobile_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_mob_no));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_email) != null) {
             user_email_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_email));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_address) != null) {
             user_address_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_address));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_city) != null) {
             user_city_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_city));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_state) != null) {
             user_state_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_state));
-
         }
         if (Utility.getSharedPreferences(mContext, Constant.vendor_postalcode) != null) {
             user_postal_code_ext.setText(Utility.getSharedPreferences(mContext, Constant.vendor_postalcode));
-
         }
-
 
         First_name_ext.setFilters(new InputFilter[]{filter});
         last_name_ext.setFilters(new InputFilter[]{filter});
@@ -132,7 +123,6 @@ public class UserProfileActivity extends AppCompatActivity {
         user_city_ext.setFilters(new InputFilter[]{filter});
         user_state_ext.setFilters(new InputFilter[]{filter});
         user_postal_code_ext.setFilters(new InputFilter[]{filter});
-
 
         if (profile_update_btn.getVisibility() == View.GONE) {
             profile_edit_btn.setVisibility(View.VISIBLE);
@@ -142,8 +132,6 @@ public class UserProfileActivity extends AppCompatActivity {
             user_city_ext.setEnabled(false);
             user_state_ext.setEnabled(false);
             user_postal_code_ext.setEnabled(false);
-
-
         }
 
 
@@ -202,7 +190,6 @@ public class UserProfileActivity extends AppCompatActivity {
             Log.e(TAG, "user postal code is empty");
         } else {
 
-
             try {
                 jsonObject.put("vendorid", Utility.getSharedPreferences(mContext, Constant.vendor_id));
                 jsonObject.put("fname", First_name_ext.getText().toString().trim());
@@ -258,7 +245,6 @@ public class UserProfileActivity extends AppCompatActivity {
                                     if (jsonObject1.optString("mob_no") != null) {
                                         Utility.setSharedPreference(mContext, Constant.vendor_mob_no, jsonObject1.optString("mob_no"));
                                     }
-
                                     user_name_txt.setText(jsonObject1.optString("name") + " " + jsonObject1.optString("last_name"));
                                     profile_edit_btn.setVisibility(View.VISIBLE);
                                     profile_update_btn.setVisibility(View.GONE);
@@ -269,7 +255,6 @@ public class UserProfileActivity extends AppCompatActivity {
                                     user_state_ext.setEnabled(false);
                                     user_postal_code_ext.setEnabled(false);
 
-
                                 } else {
                                     Utility.ShowSnakebarMessage(User_profile_relative, message);
                                 }
@@ -277,10 +262,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
                             progressDialog.dismiss();
-
-
                         }
                     },
                     new Response.ErrorListener() {
@@ -288,7 +270,6 @@ public class UserProfileActivity extends AppCompatActivity {
                         public void onErrorResponse(VolleyError error) {
                             Log.e(TAG, "onErrorResponse: " + error.getMessage());
                             progressDialog.dismiss();
-
                         }
                     }) {
 
@@ -300,13 +281,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
                 @Override
                 public byte[] getBody() throws AuthFailureError {
-                    try {
-                        return requestBody == null ? null : requestBody.getBytes("utf-8");
-                    } catch (UnsupportedEncodingException uee) {
-                        VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s",
-                                requestBody, "utf-8");
-                        return null;
-                    }
+                    return requestBody == null ? null : requestBody.getBytes(StandardCharsets.UTF_8);
                 }
             };
             requestQueue.add(signinRequest);

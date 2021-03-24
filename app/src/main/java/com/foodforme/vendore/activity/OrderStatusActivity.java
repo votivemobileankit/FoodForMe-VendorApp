@@ -273,13 +273,13 @@ public class OrderStatusActivity extends AppCompatActivity {
                                 restrorent_name.setText(jsonObject.optString("rest_name"));
                                 //    order_delivery_time.setText("Delivery Time "+jsonObject.optString("order_create"));
                                 order_id_txt.setText("# " + jsonObject.optString("order_uniqueid"));
-                                payment_txt.setText("NIS  " + jsonObject.optString("order_total"));
-                                sub_total_txt.setText("NIS  " + jsonObject.optString("order_subtotal_amt"));
-                                discount_txt.setText("NIS  " + "0.00");
-                                delivery_fee_txt.setText("NIS  " + jsonObject.optString("order_deliveryfee"));
-                                salse_tax_txt.setText("NIS  " + jsonObject.optString("order_service_tax"));
-                                total_txt.setText("NIS  " + jsonObject.optString("order_total"));
-                                grand_total_txt.setText("NIS  " + jsonObject.optString("order_total"));
+                                payment_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
+                                sub_total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_subtotal_amt"));
+                                discount_txt.setText(getResources().getString(R.string.price)+ " " + "0.00");
+                                delivery_fee_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_deliveryfee"));
+                                salse_tax_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_service_tax"));
+                                total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
+                                grand_total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
 
                                 String Order_create_date = jsonObject.optString("order_create");
                                 SimpleDateFormat mInputDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.getDefault());

@@ -47,7 +47,7 @@ public class OrderInformationAdapter extends RecyclerView.Adapter<OrderInformati
         preferences = mContext.getSharedPreferences("Vendor", MODE_PRIVATE);
         viewHolder.order_name.setText(mOrderCarditemList.get(position).getName());
         viewHolder.order_quantity.setText(mContext.getResources().getString(R.string.quantity) + mOrderCarditemList.get(position).getQty());
-        viewHolder.order_price.setText(mContext.getResources().getString(R.string.price) + mOrderCarditemList.get(position).getPrice());
+        viewHolder.order_price.setText(mContext.getResources().getString(R.string.price) +" "+ mOrderCarditemList.get(position).getPrice());
         viewHolder.specail_add_tv.setText("" + mOrderCarditemList.get(position).getInstruction());
 
         if (!mOrderCarditemList.get(position).getFoodSizeDetail().isEmpty()) {

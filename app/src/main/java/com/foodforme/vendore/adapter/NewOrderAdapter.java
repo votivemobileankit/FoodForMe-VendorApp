@@ -47,7 +47,7 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.ViewHo
         viewHolder.restrorent_name.setText(Orderlist.get(position).getRest_name());
         viewHolder.order_delivery_time.setText(Orderlist.get(position).getOrder_date_time());
         viewHolder.order_id.setText("#" + Orderlist.get(position).getUnique_order_id());
-        viewHolder.order_amount.setText(mContext.getResources().getString(R.string.price)  + Orderlist.get(position).getOrder_total());
+        viewHolder.order_amount.setText(mContext.getResources().getString(R.string.price) +" " + Orderlist.get(position).getOrder_total());
         viewHolder.order_payment_type.setText(Orderlist.get(position).getPayment_type());
         viewHolder.order_delivery_address.setText(Orderlist.get(position).getOrder_deliveryadd1());
 

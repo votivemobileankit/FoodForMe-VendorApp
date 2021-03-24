@@ -251,23 +251,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 toolbar_title.setText(getResources().getString(R.string.order_history));
                 fragment = new OrderHistoryFragment();
 
-             /* Intent intent2 = new Intent(mContext, OrderHistoryActivity.class);
-               startActivity(intent2);*/
                 break;
             case R.id.nav_setting:
                 navitemindex = 4;
                 toolbar_title.setText(getResources().getString(R.string.setting));
                 fragment = new SettingActivity();
-                //     Intent intent3 = new Intent(mContext, SettingActivity.class);
-                //     startActivity(intent3);
+
                 break;
             case R.id.nav_notify:
                 navitemindex = 5;
                 toolbar_title.setText(getResources().getString(R.string.notification));
                 fragment = new NotificationActivity();
-
-//                Intent intent4 = new Intent(mContext, NotificationActivity.class);
-//                startActivity(intent4);
 
                 break;
             case R.id.nav_aboutUs:

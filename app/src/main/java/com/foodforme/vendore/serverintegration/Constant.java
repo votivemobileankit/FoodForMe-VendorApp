@@ -9,11 +9,7 @@ public class Constant {
     public static final String CHANNEL_DESCRIPTION = "www.foodforme.com";
     public static final String SECURITY_KEY = "VOTIVE";
     public static final String SECURITY_VALUE = "123456";
-
-    //public static final String BASEURL="http://otlubli.com/demo/ws/";
-
     public static final String BASEURL="http://www.foodforme.ch/ws/";
-
    // public static final String BASEURL = "https://votivetech.in/restaurantsmarketplace/ws/";
     public static final String LoginAPI = BASEURL + "vendor-login";
     public static final String FirebaseTokenSendAPI = BASEURL + "vendor_devicetoken";

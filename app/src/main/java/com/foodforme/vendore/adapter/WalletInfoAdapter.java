@@ -68,7 +68,7 @@ public class WalletInfoAdapter extends RecyclerView.Adapter<WalletInfoAdapter.Vi
             holder.user_name.setText(context.getResources().getString(R.string.Transfer_completed));
         }
         holder.transaction_date_txt.setText(item.getCreated_at());
-        holder.transaction_amount.setText(context.getResources().getString(R.string.price) + "" + item.getVendor_amount());
+        holder.transaction_amount.setText(context.getResources().getString(R.string.price) + " " + item.getVendor_amount());
 
 
     }

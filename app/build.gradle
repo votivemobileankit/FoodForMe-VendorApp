@@ -3,7 +3,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
-
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
     defaultConfig {
         applicationId "com.foodforme.vendore"
         minSdkVersion 17
@@ -15,9 +20,9 @@ android {
     signingConfigs {
         release {
             storeFile file("otubliven.keystore")
-            storePassword "otubliven"
-            keyAlias "otublivendore"
-            keyPassword "otubliven"
+            storePassword "foodforme"
+            keyAlias "foodforme"
+            keyPassword "foodforme"
             v2SigningEnabled false
         }
     }
