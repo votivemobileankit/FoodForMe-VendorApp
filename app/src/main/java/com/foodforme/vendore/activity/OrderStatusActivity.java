@@ -127,7 +127,6 @@ public class OrderStatusActivity extends AppCompatActivity {
         toolbar_title = findViewById(R.id.toolbar_title);
         order_status_txt = findViewById(R.id.order_status_txt);
         down_arrow = findViewById(R.id.down_arrow);
-        
         toolbar_title.setText(getResources().getString(R.string.order_detail));
         orderDetais();
         order_accept_btn.setOnClickListener(new View.OnClickListener() {
@@ -171,16 +170,13 @@ public class OrderStatusActivity extends AppCompatActivity {
     private void Reject_popupresion() {
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = inflater.inflate(R.layout.reject_reson, null);
-
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.MyDialogTheme);
-
         builder.setView(layout);
         alertDialog = builder.create();
         alertDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         alertDialog.setCancelable(true);
         alertDialog.setCanceledOnTouchOutside(true);
         alertDialog.getWindow().setGravity(Gravity.BOTTOM);
-
         Resion_ext = layout.findViewById(R.id.Forgot_pass_ext);
         CustomTextView submitbtn = layout.findViewById(R.id.submit_btn);
         submitbtn.setOnClickListener(new View.OnClickListener() {
