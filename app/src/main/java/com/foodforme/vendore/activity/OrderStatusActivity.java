@@ -105,12 +105,10 @@ public class OrderStatusActivity extends AppCompatActivity {
         jObject = new JSONObject();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
+        
         restrorent_name = findViewById(R.id.restrorent_name);
         order_delivery_time = findViewById(R.id.order_delivery_time);
         print_image = findViewById(R.id.print_image);
-
         order_id_txt = findViewById(R.id.order_id_txt);
         payment_txt = findViewById(R.id.payment_txt);
         sub_total_txt = findViewById(R.id.sub_total_txt);
