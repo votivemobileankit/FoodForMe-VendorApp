@@ -105,7 +105,7 @@ public class OrderStatusActivity extends AppCompatActivity {
         jObject = new JSONObject();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        
+
         restrorent_name = findViewById(R.id.restrorent_name);
         order_delivery_time = findViewById(R.id.order_delivery_time);
         print_image = findViewById(R.id.print_image);
@@ -127,8 +127,7 @@ public class OrderStatusActivity extends AppCompatActivity {
         toolbar_title = findViewById(R.id.toolbar_title);
         order_status_txt = findViewById(R.id.order_status_txt);
         down_arrow = findViewById(R.id.down_arrow);
-
-
+        
         toolbar_title.setText(getResources().getString(R.string.order_detail));
         orderDetais();
         order_accept_btn.setOnClickListener(new View.OnClickListener() {
