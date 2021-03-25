@@ -197,4 +197,5 @@
     <string name="special_addons">Special Note</string>
     <string name="price">CHF </string>
     <string name="size">Size1 </string>
+    <string name="assign_order">Assign Order</string>
 </resources>

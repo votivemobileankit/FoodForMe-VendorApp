@@ -238,7 +238,7 @@ public class OrderHistoryFragment extends Fragment {
     private void NotficationHistoryAPI(String order_status, String from_date, String to_date) {
         OrderHistoryList.clear();
         try {
-
+           /* {"userid":"103","page_no":0,"fromdate":"","order_status":"","todate":"","lang_id":"en"}*/
             jObject = new JSONObject();
             Log.e("dATA VALUE", "" + order_status + "" + from_date + "" + to_date);
             jObject.put("userid", Utility.getSharedPreferences(mContext, Constant.vendor_id));

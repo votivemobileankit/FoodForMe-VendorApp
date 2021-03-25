@@ -38,6 +38,7 @@ import com.foodforme.vendore.SetterGatter.FoodSizeDetail;
 import com.foodforme.vendore.SetterGatter.OrderCarditem;
 import com.foodforme.vendore.SetterGatter.OrderDetail;
 import com.foodforme.vendore.SetterGatter.SetGet;
+import com.foodforme.vendore.adapter.DriverListAdapter;
 import com.foodforme.vendore.adapter.OrderInformationAdapter;
 import com.foodforme.vendore.customwidget.CustomTextView;
 import com.foodforme.vendore.fragments.OrderHistoryFragment;
@@ -86,10 +87,11 @@ public class OrderStatusActivity extends AppCompatActivity {
     TransparentProgressDialog progressDialog;
     AlertDialog alertDialog;
     Date mParsedDate;
-    String mOutputDateString, invoice_url="";
+    String mOutputDateString, invoice_url = "";
     SharedPreferences preferences;
-
-
+    RelativeLayout update_status_layout, assign_order_layout;
+    TextView selecte_driver_txt;
+    DriverListAdapter mDriverListAdapter;
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleHelper.onAttach(base));
@@ -99,13 +101,13 @@ public class OrderStatusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_status);
+
         progressDialog = TransparentProgressDialog.getInstance();
         preferences = getSharedPreferences("Vendor", MODE_PRIVATE);
         mContext = this;
         jObject = new JSONObject();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         restrorent_name = findViewById(R.id.restrorent_name);
         order_delivery_time = findViewById(R.id.order_delivery_time);
         print_image = findViewById(R.id.print_image);
@@ -127,8 +129,16 @@ public class OrderStatusActivity extends AppCompatActivity {
         toolbar_title = findViewById(R.id.toolbar_title);
         order_status_txt = findViewById(R.id.order_status_txt);
         down_arrow = findViewById(R.id.down_arrow);
+        selecte_driver_txt = findViewById(R.id.selecte_driver_txt);
         toolbar_title.setText(getResources().getString(R.string.order_detail));
         orderDetais();
+
+        selecte_driver_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DriverList();
+            }
+        });
         order_accept_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,7 +177,34 @@ public class OrderStatusActivity extends AppCompatActivity {
         });
     }
 
+    private void DriverList() {
+
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = inflater.inflate(R.layout.driver_list_layout, null);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.MyDialogTheme);
+        builder.setView(layout);
+        alertDialog = builder.create();
+        alertDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+        alertDialog.setCancelable(true);
+        alertDialog.setCanceledOnTouchOutside(true);
+        alertDialog.getWindow().setGravity(Gravity.BOTTOM);
+        Resion_ext = layout.findViewById(R.id.Forgot_pass_ext);
+        RecyclerView driver_list_RV = layout.findViewById(R.id.driver_list_RV);
+
+        driver_list_RV.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, RecyclerView.VERTICAL, false);
+        driver_list_RV.setLayoutManager(layoutManager);
+        mDriverListAdapter = new DriverListAdapter(mContext);
+        driver_list_RV.setAdapter(mDriverListAdapter);
+        mDriverListAdapter.notifyDataSetChanged();
+
+        alertDialog.show();
+        alertDialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
+    }
+
+
     private void Reject_popupresion() {
+
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = inflater.inflate(R.layout.reject_reson, null);
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.MyDialogTheme);
@@ -186,10 +223,8 @@ public class OrderStatusActivity extends AppCompatActivity {
                     Resion_ext.requestFocus();
                     Resion_ext.setError(getResources().getString(R.string.enter_reason));
                     //Utility.ShowSnakebarMessage(order_status_layout, "Please entesr the reason for rejecting order");
-
                 } else {
                     OrderReject("6", Resion_ext.getText().toString().trim());
-
                 }
             }
         });
@@ -210,7 +245,6 @@ public class OrderStatusActivity extends AppCompatActivity {
         alertDialog.setCancelable(true);
         alertDialog.setCanceledOnTouchOutside(true);
         alertDialog.getWindow().setGravity(Gravity.BOTTOM);
-
         new_order = layout.findViewById(R.id.new_order);
         order_conf = layout.findViewById(R.id.order_conf);
         order_ready = layout.findViewById(R.id.order_ready);
@@ -222,13 +256,14 @@ public class OrderStatusActivity extends AppCompatActivity {
         order_ready.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 order_conf_select.setVisibility(View.GONE);
                 order_ready_unselect.setVisibility(View.GONE);
                 order_conf_unselect.setVisibility(View.VISIBLE);
                 order_ready_select.setVisibility(View.VISIBLE);
-
                 alertDialog.dismiss();
                 OrderAccept("5");
+
             }
         });
 
@@ -260,19 +295,20 @@ public class OrderStatusActivity extends AppCompatActivity {
                                 JsonParser jsonParser = new JsonParser();
                                 JsonObject jsonResp = jsonParser.parse(response).getAsJsonObject();
                                 Example mGetCartDetails = gson.fromJson(jsonResp, Example.class);
+
                                 OrderDetail mOrderDetail = mGetCartDetails.getOrderDetail();
 
                                 Log.e("rest_name", jsonObject.optString("rest_name"));
                                 restrorent_name.setText(jsonObject.optString("rest_name"));
                                 //    order_delivery_time.setText("Delivery Time "+jsonObject.optString("order_create"));
                                 order_id_txt.setText("# " + jsonObject.optString("order_uniqueid"));
-                                payment_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
-                                sub_total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_subtotal_amt"));
-                                discount_txt.setText(getResources().getString(R.string.price)+ " " + "0.00");
-                                delivery_fee_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_deliveryfee"));
-                                salse_tax_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_service_tax"));
-                                total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
-                                grand_total_txt.setText(getResources().getString(R.string.price)+ " " + jsonObject.optString("order_total"));
+                                payment_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_total"));
+                                sub_total_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_subtotal_amt"));
+                                discount_txt.setText(getResources().getString(R.string.price) + " " + "0.00");
+                                delivery_fee_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_deliveryfee"));
+                                salse_tax_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_service_tax"));
+                                total_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_total"));
+                                grand_total_txt.setText(getResources().getString(R.string.price) + " " + jsonObject.optString("order_total"));
 
                                 String Order_create_date = jsonObject.optString("order_create");
                                 SimpleDateFormat mInputDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.getDefault());
@@ -295,14 +331,15 @@ public class OrderStatusActivity extends AppCompatActivity {
                                         accept_reject_layout.setVisibility(View.VISIBLE);
                                         print_image.setVisibility(View.GONE);
                                         break;
+
                                     case "4":
+
                                         order_status_txt.setText(getResources().getString(R.string.update_order_status));
                                         update_status_btn.setText(getResources().getString(R.string.confirm_order));
                                         down_arrow.setVisibility(View.VISIBLE);
                                         accept_reject_layout.setVisibility(View.GONE);
                                         print_image.setVisibility(View.VISIBLE);
                                         break;
-
 
                                     case "5":
                                         order_status_txt.setText(getResources().getString(R.string.order_status));
@@ -366,6 +403,7 @@ public class OrderStatusActivity extends AppCompatActivity {
 
                                 }
                                 List<OrderCarditem> orderCarditem = mGetCartDetails.getOrderDetail().getOrderCarditem();
+
                                 order_infomation_list.setHasFixedSize(true);
                                 LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, RecyclerView.VERTICAL, false);
                                 order_infomation_list.setLayoutManager(layoutManager);
@@ -446,6 +484,10 @@ public class OrderStatusActivity extends AppCompatActivity {
                                 print_image.setVisibility(View.VISIBLE);
                                 order_status_txt.setText(getResources().getString(R.string.update_order_status));
                                 down_arrow.setVisibility(View.GONE);
+
+
+                                orderDetais();
+
                                /* if (status.equals("5"))
                                 {
                                     onBackPressed();
